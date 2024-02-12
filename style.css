@@ -1,0 +1,74 @@
+body{
+    overflow: hidden;
+    min-height: 100vh;
+    cursor: crosshair;
+    
+}
+*{
+    list-style: none;
+}
+ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); 
+}
+.bubble{
+    position: absolute;
+    border-radius: 300px;
+    background: rgba(255, 166, 0, 0.6);
+    opacity: 0;
+    animation:  anim 8s forwards;
+    filter: hue-rotate(0deg);
+    box-shadow: 1px 2px 40px rgb(120, 120, 120); 
+    
+}
+
+@keyframes anim {
+    to {
+        top: -350px;
+        left: var(--left);
+        opacity: 1;
+        filter: hue-rotate(720deg);
+    }
+}
+h2{
+    color: rgb(171, 171, 171);
+    font-size: 3rem;
+    margin: 0px;
+    text-shadow: 1px 10px 10px rgb(159, 159, 159);
+}
+h3{
+    font-size: 5rem;
+    margin: 0px;
+    color: rgba(222, 176, 108, 0.677);
+    text-shadow: 1px 10px 10px rgb(159, 159, 159);
+}
+h4{
+    color: rgb(171, 171, 171);
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 1px 10px 10px rgb(159, 159, 159);
+}
+h5{
+    font-size: 5rem;
+    margin: 0px;
+    color: rgba(222, 176, 108, 0.677);
+    text-shadow: 1px 10px 10px rgb(159, 159, 159);
+}
+button{
+    color: white;
+    font-size: 3rem;
+    border-radius: 10px;
+    padding: 10px;
+    background: rgb(17, 17, 151);
+    border: 5px solid rgb(103, 103, 103);
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
