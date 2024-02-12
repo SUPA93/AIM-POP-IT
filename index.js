@@ -44,10 +44,16 @@ const startGame = () => {
     const timerInterval = setInterval(() => {
         time--;
         timeDisplay.textContent = time;
+        if (time <= 10){
+            timeDisplay.style.color = "red";
+        }else{
+            timeDisplay.style.color = "rgba(222, 176, 108, 0.677)";
+        }
 
         if (time <= 0) {
             clearInterval(timerInterval);
             isGameActive = false;
+            timeDisplay.style.color = "rgba(222, 176, 108, 0.677)";
         }
     }, 1000);
 
