@@ -6,16 +6,23 @@ body{
 }
 *{
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 ul{
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction:row;
+    justify-content: center;
     align-items: center;
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
+
+}
+li{
+    margin: 5px;
 }
 .bubble{
     position: absolute;
@@ -38,24 +45,24 @@ ul{
 }
 h2{
     color: rgb(171, 171, 171);
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0px;
     text-shadow: 1px 10px 10px rgb(159, 159, 159);
 }
 h3{
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0px;
     color: rgba(222, 176, 108, 0.677);
     text-shadow: 1px 10px 10px rgb(159, 159, 159);
 }
 h4{
     color: rgb(171, 171, 171);
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0;
     text-shadow: 1px 10px 10px rgb(159, 159, 159);
 }
 h5{
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0px;
     color: rgba(222, 176, 108, 0.677);
     text-shadow: 1px 10px 10px rgb(159, 159, 159);
