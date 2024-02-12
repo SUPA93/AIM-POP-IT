@@ -1,19 +1,21 @@
-body{
+body {
     overflow: hidden;
     min-height: 100vh;
     cursor: crosshair;
-    
+
 }
-*{
+
+* {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-ul{
+
+ul {
     width: 100%;
     display: flex;
-    flex-direction:row;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     position: absolute;
     left: 50%;
@@ -21,18 +23,20 @@ ul{
     transform: translateX(-50%);
 
 }
-li{
-    margin: 5px;
+
+li {
+    margin: 0px;
 }
-.bubble{
+
+.bubble {
     position: absolute;
     border-radius: 300px;
     background: rgba(255, 166, 0, 0.6);
     opacity: 0;
-    animation:  anim 8s forwards;
+    animation: anim 8s forwards;
     filter: hue-rotate(0deg);
-    box-shadow: 1px 2px 40px rgb(120, 120, 120); 
-    
+    box-shadow: 1px 2px 40px rgb(120, 120, 120);
+
 }
 
 @keyframes anim {
@@ -43,31 +47,38 @@ li{
         filter: hue-rotate(720deg);
     }
 }
-h2{
+
+h2 {
     color: rgb(171, 171, 171);
     font-size: 2rem;
     margin: 0px;
     text-shadow: 1px 10px 10px rgb(159, 159, 159);
+
+
 }
-h3{
+
+h3 {
     font-size: 3rem;
     margin: 0px;
     color: rgba(222, 176, 108, 0.677);
     text-shadow: 1px 10px 10px rgb(159, 159, 159);
 }
-h4{
+
+h4 {
     color: rgb(171, 171, 171);
     font-size: 2rem;
     margin: 0;
     text-shadow: 1px 10px 10px rgb(159, 159, 159);
 }
-h5{
+
+h5 {
     font-size: 3rem;
     margin: 0px;
     color: rgba(222, 176, 108, 0.677);
     text-shadow: 1px 10px 10px rgb(159, 159, 159);
 }
-button{
+
+button {
     color: white;
     font-size: 3rem;
     border-radius: 10px;
@@ -75,7 +86,15 @@ button{
     background: rgb(17, 17, 151);
     border: 5px solid rgb(103, 103, 103);
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 500px) {
+    h2, h3, h4, h5 {
+        font-size: 1.5rem;
+    }
+    button{
+        font-size: 2rem;
+    }
 }
