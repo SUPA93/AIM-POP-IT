@@ -44,10 +44,16 @@ const startGame = () => {
     const timerInterval = setInterval(() => {
         time--;
         timeDisplay.textContent = time;
-        if (time <= 10){
+        if (time <= 10) {
             timeDisplay.style.color = "red";
-        }else{
+        } else {
             timeDisplay.style.color = "rgba(222, 176, 108, 0.677)";
+        }
+        // son sur les dernières 3 secondes
+        if (time <= 3 && time > 0) {
+            const countdownSound = document.getElementById('countdownSound');
+            countdownSound.currentTime = 0; 
+            countdownSound.play();
         }
 
         if (time <= 0) {
