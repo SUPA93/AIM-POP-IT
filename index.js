@@ -9,6 +9,7 @@ const startGame = () => {
     counter = 0;
     time = 60;
     isGameActive = true;
+    counterBarr.style = "opacity:1";
     counterDisplay.textContent = counter;
     timeDisplay.textContent = time;
     startButton.style.display = "none";
@@ -44,11 +45,8 @@ const startGame = () => {
     const timerInterval = setInterval(() => {
         time--;
         timeDisplay.textContent = time;
-        if (time <= 10) {
-            timeDisplay.style.color = "red";
-        } else {
-            timeDisplay.style.color = "rgba(222, 176, 108, 0.677)";
-        }
+        timeDisplay.style.color = time <= 10 ? "red" : "rgba(222, 176, 108, 0.677)"
+        
         // son sur les dernières 3 secondes
         if (time <= 3 && time > 0) {
             const countdownSound = document.getElementById('countdownSound');
@@ -73,6 +71,7 @@ const startGame = () => {
         clearInterval(bubbleInterval);
         clearBubbles();
         startButton.style.display = "";
+        
     }, 60000);
 
 };
